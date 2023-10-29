@@ -1,5 +1,6 @@
 {
   "name": "tarot",
+  "homepage": "https://mchlol.github.io/tarot",
   "private": true,
   "version": "0.0.0",
   "type": "module",
