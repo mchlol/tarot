@@ -62,9 +62,11 @@ Apparently this can be safely ignored but I managed to fix it by following these
 
 
 #### Error: GET https://mchlol.github.io/src/main.jsx net::ERR_ABORTED 404 (Not Found)
-So we can see the file path is wrong. Apparently this is not unheard of using Vite. I tried the methods in these answers:  
+So we can see the file path is wrong. Apparently this is not unheard of using Vite. I tried these methods: 
 - https://stackoverflow.com/a/75367844 - adding a `base` property to `vite.config.js`
 - https://stackoverflow.com/a/70148453 - changing the build script in `package.json`
+- adding . to the file path in `index.html`
+- adding a homepage in `package.json`
 
 ## Resources
 
