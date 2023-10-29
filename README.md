@@ -67,6 +67,7 @@ So we can see the file path is wrong. Apparently this is not unheard of using Vi
 - https://stackoverflow.com/a/70148453 - changing the build script in `package.json`
 - adding . to the file path in `index.html`
 - adding a homepage in `package.json`
+- set up a workflow to gh pages deployment as per the [Vite docs](https://vitejs.dev/guide/static-deploy.html)
 
 ## Resources
 
