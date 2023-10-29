@@ -69,6 +69,10 @@ So we can see the file path is wrong. Apparently this is not unheard of using Vi
 - adding a homepage in `package.json`
 - set up a workflow to gh pages deployment as per the [Vite docs](https://vitejs.dev/guide/static-deploy.html)
 - add gh-pages as dependency and deploy from gh-pages
+- use Netlify instead, run into new error:  
+"Failed to load module script: Expected a JavaScript module script but the server responded with a MIME type of "application/octet-stream". Strict MIME type checking is enforced for module scripts per HTML spec."
+- realise `dist` folder is in `gitignore`, remove it and have successful deploy on netlify 😅🔫
+
 
 ## Resources
 
