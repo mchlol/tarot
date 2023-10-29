@@ -45,11 +45,15 @@ export default function CardDetails(props) {
             <div className="cards-container">
 
                 {cards.map(card => 
+
                     <div className="card" key={card.name_short}>
-                        <h3>{card.name}</h3>
+
+                        <h3>{card.name === 'Fortitude' ? 'Fortitude (Strength)' : card.name}</h3>
+
                         <CardImage className='card-img' alt={card.desc} fileName={getImgCode(card)}/>
+
                         <p>{card.meaning_up}</p>
-                        {/* <small>{card.desc}</small> */}
+
                     </div>
                 )}
             </div>
