@@ -55,13 +55,13 @@ I googled 'react import images dynamically' and came across this stack overflow 
 
 ### github build issues - not resolved
 
-On deploying to GitHub pages the app does not load, and these two errors are in the console.  
+On deploying to GitHub pages the app does not load, and these two messages are in the console.  
 
-#### Error with Permissions-Policy header: Origin trial controlled feature not enabled: 'interest-cohort'.
+#### Warning: Error with Permissions-Policy header: Origin trial controlled feature not enabled: 'interest-cohort'.
 Apparently this can be safely ignored but I managed to fix it by following these instructions and adding a meta tag to my `index.html` head. Now this error appears intermittently. Yay.
 
 
-#### GET https://mchlol.github.io/src/main.jsx net::ERR_ABORTED 404 (Not Found)
+#### Error: GET https://mchlol.github.io/src/main.jsx net::ERR_ABORTED 404 (Not Found)
 So we can see the file path is wrong. Apparently this is not unheard of using Vite. I tried the methods in these answers:  
 - https://stackoverflow.com/a/75367844 - adding a `base` property to `vite.config.js`
 - https://stackoverflow.com/a/70148453 - changing the build script in `package.json`
