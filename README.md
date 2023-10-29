@@ -5,7 +5,8 @@ Users can pull one or three cards for now, and receive an image and keywords ass
 
 ## TODO:
 - create a component to show individual card information (more info)
-- only refresh the card details component not the whole page
+- add an about or further info on tarot page
+- only refresh the card details component not the whole App component - move the state
 - search for a specific card
 - create 'readings' eg. 1 answers a question, 3 is past/present/future
 - option to show reversed card and matching info

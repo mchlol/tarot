@@ -40,7 +40,6 @@ export default function CardDetails(props) {
 
     return (
         <section className="cards-section">
-            <em>Displaying {props.num === 'All' ? 'all' : props.num} card(s)</em>
 
             <div className="cards-container">
 
