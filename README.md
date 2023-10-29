@@ -4,10 +4,11 @@ A simple app that gets information on tarot cards from the [Tarot API](https://g
 Users can pull one or three cards for now, and receive an image and keywords associated with that card (when pulled up).  
 
 ## TODO:
-- create a component to show individual card information
+- create a component to show individual card information (more info)
 - only refresh the card details component not the whole page
-- routes?... 
-- ...look into next.js
+- search for a specific card
+- create 'readings' eg. 1 answers a question, 3 is past/present/future
+- option to show reversed card and matching info
 - polish/jazz it up 
 
 ## Challenges
