@@ -1,0 +1,51 @@
+#root {
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+h1,
+h2,
+h3 {
+  color: #7732cc;
+}
+
+main {
+  width: 100%;
+}
+
+.btn-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 1em;
+  padding: 1em;
+  gap: 1em;
+  border: 1px dashed lavender;
+  border-radius: 8px;
+}
+
+.card {
+  max-width: 250px;
+  border: 1px dashed lavender;
+  border-radius: 8px;
+  margin: 1em;
+  padding: 1em;
+}
+
+.card-img {
+  width: 100%;
+}
+
+.cards-section {
+  width: 100%;
+  text-align: center;
+}
+
+.cards-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: stretch;
+}
