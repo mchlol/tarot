@@ -1,8 +1,55 @@
-# React + Vite
+# Tarot - WIP
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple app that gets information on tarot cards from the [Tarot API](https://github.com/ekelen/tarot-api).  
+Users can pull one or three cards for now, and receive an image and keywords associated with that card (when pulled up).  
 
-Currently, two official plugins are available:
+## TODO:
+- create a component to show individual card information
+- only refresh the card details component not the whole page
+- routes?... 
+- ...look into next.js
+- polish/jazz it up 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Challenges
+
+Image routing - there was no key or name for the image file names in the data returned. However there is a short name. The numbers correspond so I wrote a function to convert the short name into a valid file name. E.g. the short name might be 'ar05' which refers to major arcana, but the corresponding image filename would be 'm05'. I also needed a way to import only the required image file. There are 78 cards so I think this is a pretty short way to handle it:  
+
+```
+    // intepret the short name to retrieve the right card image
+    function getImgCode(card) {
+        const name = card.name_short;
+        // get the first character
+        let letter = name.slice(0,1);
+        // get the last 2 characters
+        let lastNums = name.slice(2);
+
+        // get major arcana
+        if (letter === 'a') {
+            letter = 'm'
+        } 
+
+        // get minor arcana
+        if (lastNums === 'ac') { // ace
+            lastNums = '01'
+        } else if (lastNums === 'pa') { // page
+            lastNums = '11'
+        } else if (lastNums === 'kn') { // knight
+            lastNums = '12'
+        } else if (lastNums === 'qu') { // queen
+            lastNums = '13'
+        } else if (lastNums === 'ki') { // king
+            lastNums = '14'
+        }
+
+        const code = letter+lastNums;
+        return code;
+    }
+```
+
+To import the images:  
+I googled 'react import images dynamically' and came across this stack overflow answer that describes using custom hooks. I didn't have any experience with this yet so I'm not 100% on how it works but I gave it a try. It basically means I can pass the fileName prop (my 'code' returned from the function above) and it will return the right image from the `assets/cards` folder without worrying about the full path.  
+
+## Resources
+
+- [Tarot API](https://github.com/ekelen/tarot-api)
+- [Stack Overflow](https://stackoverflow.com/a/70024111)
